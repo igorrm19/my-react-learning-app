@@ -1,10 +1,12 @@
 import PropTypes from 'prop-types';
 
-const StatesBadge = ({ status = 'online' }) => {
+const StatesBadge = ({ status = '' }) => {
     return (
         <>
             {/*if and else*/}
-            {status === 'online' ? <p className="badgeOnline">Online</p> : <p className="badgeOffline">Offline</p>}
+            {status === '' && <p className="badgeOffline">Status Indefinido</p>}
+            {status === 'online' && <p className="badgeOnline">Online</p>}
+            {status === 'offline' && <p className="badgeOffline">Offline</p>}
         </>
     )
 }
