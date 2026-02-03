@@ -1,6 +1,6 @@
-import PropTypes from '../../node_modules/prop-types/prop-types';
+import PropTypes from 'prop-types';
 
-const userAvatar = ({ imageURL, sizeH, sizeW }) => {
+const UserAvatar = ({ imageURL, sizeH, sizeW }) => {
     return (
         <>
             <img src={imageURL} height={sizeH} width={sizeW} />
@@ -8,10 +8,10 @@ const userAvatar = ({ imageURL, sizeH, sizeW }) => {
     )
 }
 
-export default userAvatar;
+export default UserAvatar;
 
 
-userAvatar.propTypes = {
+UserAvatar.propTypes = {
     imageURL: PropTypes.string,
     sizeH: PropTypes.number,
     sizeW: PropTypes.number

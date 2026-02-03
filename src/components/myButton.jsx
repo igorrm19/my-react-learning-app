@@ -1,16 +1,17 @@
-import PropTypes from '../../node_modules/prop-types/prop-types';
+import PropTypes from 'prop-types';
 
-const myButton = ({ label, color }) => {
+const MyButton = ({ label, color, onClick }) => {
     return (
-        <button style={{ backgroundColor: color }}>{label}</button>
+        <button className="my-button" style={{ backgroundColor: color }} onClick={onClick}>{label}</button>
     )
 }
 
-export default myButton;
+export default MyButton;
 
 
-myButton.propTypes = {
+MyButton.propTypes = {
     label: PropTypes.string,
-    color: PropTypes.string
+    color: PropTypes.string,
+    onClick: PropTypes.func
 }
 

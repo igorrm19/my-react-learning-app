@@ -1,17 +1,17 @@
-import PropTypes from '../../node_modules/prop-types/prop-types';
+import PropTypes from 'prop-types';
 
-const statesBadge = ({ status = 'online' }) => {
+const StatesBadge = ({ status = 'online' }) => {
     return (
         <>
             {/*if and else*/}
-            {status === 'online' ? <p>Online</p> : <p>Offline</p>}
+            {status === 'online' ? <p className="badgeOnline">Online</p> : <p className="badgeOffline">Offline</p>}
         </>
     )
 }
 
-export default statesBadge;
+export default StatesBadge;
 
 
-statesBadge.propTypes = {
+StatesBadge.propTypes = {
     status: PropTypes.string
 }
