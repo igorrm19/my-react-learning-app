@@ -24,51 +24,76 @@ function DigitalModRightComponent() {
 
     return (
         <>
-            {mod === "Productive" ?
-
-                <body
-                    style={{
-                        backgroundColor: "green",
-                        width: "100%",
-                        height: "100%",
-                        color: "white",
-                    }}
-                />
-
-                : mod === "Tired" ?
+            <div style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                flexDirection: "column",
+                width: "100vw",
+                height: "100vh",
+            }}>
+                {mod === "Productive" ?
 
                     <body
                         style={{
-                            backgroundColor: "grey",
-                            width: "100%",
-                            height: "100%",
+                            backgroundColor: "green",
+                            display: "flex",
+                            justifyContent: "center",
+                            alignItems: "center",
+                            width: "100vw",
+                            height: "100vh",
                             color: "white",
                         }}
                     />
 
-                    :
+                    : mod === "Tired" ?
 
-                    <body
-                        style={{
-                            backgroundColor: "cyan",
-                            width: "100%",
-                            height: "100%",
-                            color: "white",
-                        }}
-                    />
-            }
+                        <body
+                            style={{
+                                backgroundColor: "grey",
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center",
+                                width: "100vw",
+                                height: "100vh",
+                                color: "white",
+                            }}
+                        />
+
+                        :
+
+                        <body
+                            style={{
+                                backgroundColor: "cyan",
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center",
+                                width: "100vw",
+                                height: "100vh",
+                                color: "white",
+                            }}
+                        />
+                }
 
 
-            <h1>{mod}</h1>
-            <MyButton
-                label="Productive"
-                onClick={Productive} />
-            <MyButton
-                label="Tired"
-                onClick={Tired} />
-            <MyButton
-                label="Inspired"
-                onClick={Inspired} />
+                <h1>{mod}</h1>
+                <div style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                }}>
+                    <MyButton
+                        label="Productive"
+                        onClick={Productive} />
+                    <MyButton
+                        label="Tired"
+                        onClick={Tired} />
+                    <MyButton
+                        label="Inspired"
+                        onClick={Inspired} />
+
+                </div>
+            </div>
         </>
     )
 }
